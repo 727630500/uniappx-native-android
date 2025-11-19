@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 第一步：必须先检出代码，确保工作目录有 .git 仓库
       - uses: actions/checkout@v4
 
       - name: Set up JDK 18
@@ -25,9 +26,7 @@ jobs:
 
       - name: Generate debug keystore (clean old first)
         run: |
-          # 先删除可能残留的旧密钥库，避免重复生成冲突
           rm -f app/debug.keystore
-          # 生成新的调试密钥库
           keytool -genkey -v -keystore app/debug.keystore \
             -storepass android \
             -alias androiddebugkey \
