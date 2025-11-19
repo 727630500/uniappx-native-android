@@ -16,13 +16,17 @@ android {
         applicationId 'cn.uvuejs.kux'
         minSdk 21
 		targetSdk 30
-        versionCode 100
-        versionName '1.0.0'
+        versionCode 169
+        versionName '1.6.9'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
 
-        buildConfigField "String", "UTSRegisterComponents", "\"[{\\\"name\\\":\\\"video\\\",\\\"class\\\":\\\"uts.sdk.modules.DCloudUniVideo.VideoComponent\\\"}]\""
+        buildConfigField "String[]", "UTSHooksClassArray", "{\"uts.sdk.modules.wjHookScreen.AppHookProxy\"}"
+        buildConfigField "String", "UTSRegisterComponents", "\"[{\\\"name\\\":\\\"video\\\",\\\"class\\\":\\\"uts.sdk.modules.DCloudUniVideo.VideoComponent\\\"},{\\\"name\\\":\\\"canvas\\\",\\\"class\\\":\\\"io.dcloud.canvas.CanvasComponent\\\",\\\"node\\\":\\\"io.dcloud.canvas.UniCanvasElementImpl\\\"}]\""
+        buildConfigField "String", "UTSEasyCom", "\"[{\\\"class\\\":\\\"uts.sdk.modules.DCloudUniActionSheet.UniActionSheetExtApiPagesRegister\\\",\\\"method\\\":\\\"register\\\"},{\\\"class\\\":\\\"uts.sdk.modules.DCloudUniPreviewImage.UniPreviewImageExtApiPagesRegister\\\",\\\"method\\\":\\\"register\\\"}]\""
+        buildConfigField "String", "UTSRegisterProvider", "\"[{\\\"name\\\":\\\"system\\\",\\\"service\\\":\\\"location\\\",\\\"class\\\":\\\"uts.sdk.modules.DCloudUniLocationSystem.UniLocationSystemProviderImpl\\\"}]\""
+        buildConfigField "String[]", "UTSHooksClassArray", '{\"uts.sdk.modules.DCloudUniOpenDocument.UniOpenDocumentHookProxy\"}'
 		
 
         ndk {
@@ -86,10 +90,21 @@ dependencies {
     implementation project(':uniappx')
     implementation fileTree(include: ['*.aar', '*.jar'], dir: '../uniappx/libs')
     implementation "com.squareup.okhttp3:okhttp:3.12.12"
-	implementation project(':kux-pip')
+	implementation project(':lime-audio-player')
+	implementation project(':lime-switch')
+	implementation project(':uni-previewImage')
+	implementation project(':wj-audio-player')
+	implementation project(':wj-hookScreen')
+	implementation project(':wj-input')
+	implementation project(':wj-InputFieldModifier')
+	implementation project(':wj-karaoke')
+	implementation project(':wj-kdxf')
+	implementation project(':wj-scroll')
+	implementation project(':wj-selectText')
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.core:core:1.1.0'
+    implementation 'androidx.webkit:webkit:1.6.0'
     implementation 'com.squareup.okhttp3:okhttp:3.12.12'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'

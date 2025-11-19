@@ -1,0 +1,47 @@
+{
+  "id": "__UNI__F47E312",
+  "name": "泓程智练",
+  "description": "",
+  "version": {
+    "name": "1.6.9",
+    "code": "169"
+  },
+  "uni-app-x": {
+    "compilerVersion": "4.75"
+  },
+  "app-android": {
+    "distribute": {
+      "modules": {
+        "uni-installApk": {},
+        "uni-event": {},
+        "uni-getSystemInfo": {},
+        "uni-video": {},
+        "uni-storage": {},
+        "uni-prompt": {},
+        "uni-fileSystemManager": {},
+        "uni-network": {},
+        "uni-rpx2px": {},
+        "uni-getAppBaseInfo": {},
+        "uni-exit": {},
+        "uni-media": {},
+        "uni-getElementById": {},
+        "uni-dialogPage": {}
+      },
+      "icons": {
+        "hdpi": "unpackage/res/icons/72x72.png",
+        "xhdpi": "unpackage/res/icons/96x96.png",
+        "xxhdpi": "unpackage/res/icons/144x144.png",
+        "xxxhdpi": "unpackage/res/icons/192x192.png"
+      },
+      "splashScreens": {
+        "default": {}
+      },
+      "_uni-app-x_": {
+        "pageOrientation": "landscape"
+      },
+      "globalStyle": {
+        "pageOrientation": "landscape"
+      }
+    }
+  }
+}

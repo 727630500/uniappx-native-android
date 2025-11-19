@@ -25,7 +25,17 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "kux-pip-app"
+rootProject.name = "泓程智练-app"
 include ':app'
 include ':uniappx'
-include ':kux-pip'
+include ':lime-audio-player'
+include ':lime-switch'
+include ':uni-previewImage'
+include ':wj-audio-player'
+include ':wj-hookScreen'
+include ':wj-input'
+include ':wj-InputFieldModifier'
+include ':wj-karaoke'
+include ':wj-kdxf'
+include ':wj-scroll'
+include ':wj-selectText'
